@@ -28,13 +28,16 @@ if %errorlevel% neq 0 (
     msiexec /i https://github.com/git-for-windows/git/releases/download/v2.37.0.windows.1/Git-2.37.0-64-bit.exe /quiet /qn /norestart
 
     echo Git installed successfully.
-    
+)
+
+REM Check if bespoke_automata directory exists
+if not exist bespoke_automata (
     echo Cloning repository...
     git clone https://github.com/C0deMunk33/bespoke_automata
 ) else (
-    echo Git is installed. Cloning repository...
-    git clone https://github.com/C0deMunk33/bespoke_automata
+    echo bespoke_automata directory already exists. Skipping git clone.
 )
+
 
 echo Restarting command prompt...
 timeout /t 5 /nobreak >nul
