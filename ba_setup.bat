@@ -38,8 +38,10 @@ if %errorlevel% neq 0 (
 
 echo Restarting command prompt...
 timeout /t 5 /nobreak >nul
-start cmd /k npm run start
+cd bespoke_automata
 
+echo Running npm start...
+start cmd /k npm run start
 
 REM alternate start method
 REM start cmd /k "electron-forge init my-electron-app && cd my-electron-app && yarn install && yarn start"
