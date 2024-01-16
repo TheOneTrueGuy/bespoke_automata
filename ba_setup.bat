@@ -4,6 +4,10 @@ echo Installing Node.js and npm....
 REM Download and install Node.js LTS version 
 msiexec /i https://nodejs.org/dist/v14.17.0/node-v14.17.0-x64.msi /quiet /qn /norestart
 
+set "NODE_PATH=%ProgramFiles%\nodejs"
+set "NPM_PATH=%AppData%\npm"
+set "PATH=%PATH%;%NODE_PATH%;%NPM_PATH%"
+
 echo Installing Electron-forge and Yarn...
 npm install -g electron-forge yarn
 
