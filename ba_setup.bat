@@ -52,3 +52,5 @@ start cmd /k npm run start
 
 REM alternate start method
 REM start cmd /k "electron-forge init my-electron-app && cd my-electron-app && yarn install && yarn start"
+
+pause
